@@ -2,9 +2,12 @@
 
 <h1 align="center">☪️ Eida Ōtsutsuki [BETA] ☪️</h1>
 
-App do Discord **Boruto Raiden ©** - MMORPG *semi-automático* textual de Naruto & Boruto.  
 <p align="center">
-  <img src="https://github.com/ch4rliedev/boruto-raiden-bot-discord/assets/88893508/921f3c41-cde6-44d1-a8b7-3a5f29d49508" alt="Logo Boruto Raiden"> <br>
+  App do Discord **Boruto Raiden ©** - MMORPG *semi-automático* textual de Naruto & Boruto.
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2786f9dd-ff64-4bde-8b0c-ebfe75110700" alt="Logo Boruto Raiden"> <br>
   <img src="https://img.shields.io/badge/License-GPN-green" alt="Licença">
   <img src="https://img.shields.io/badge/Desenvolvedor-chartliex-red" alt="Desenvolvedor">
 </p>
@@ -22,4 +25,5 @@ Inicie sua aventura acessando nosso site e baixando o nosso aplicativo.
 
 ## 🔑 Licença
 Personagens e ilustrações originais © 2002 por Masashi Kishimoto / 2007 NARUTO SHIPPUDEN / 2017 BORUTO: NARUTO NEXT GENERATIONS - Todos os direitos reservados. <br>
-Código-fonte ©2023-2025 por Boruto Raiden © - Todos os direitos reservados.
+Código-fonte ©2023-2025 por Boruto Raiden © - Todos os direitos reservados.![Eida-1]()
+
