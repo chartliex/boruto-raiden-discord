@@ -2,7 +2,7 @@ import { SlashCommandBuilder } from 'discord.js';
 
 export const data = new SlashCommandBuilder()
     .setName('spam')
-    .setDescription('SPAM de divulgação do servidor.')
+    .setDescription('SPAM de divulgação do servidor oficial no Discord do Boruto Raiden.')
 
     .addStringOption(option =>
         option.setName('tipo_spam')
@@ -27,11 +27,11 @@ Entretanto, os líderes de cada nação, cobertos por ganância, começaram a qu
 
 Mas... Será que isso realmente acabará em paz?
 ## O que oferecemos:
-> :robot: Servidor semi-automático com site e bot exclusivos, esqueça cenas de 2000 caracteres todos os dias.
-> :scroll: Modo história com um evento canon toda semana.
-> :crossed_swords: Campeonato das Nações para competir pela sua vila.
+> :robot: Servidor semi-automático com site, bot e aplicativo exclusivo, esqueça turnos de 2000 caracteres todos os dias.
+> :scroll: Modo história com um evento toda semana.
+> :crossed_swords: Campeonato das Nações para competir pela sua vila para decidir a mais forte.
 > :handshake: Seguro, justo e honesto.
-> :cyclone: Sorteio de 3 clãs para escolher para seu personagem entre 50 opções disponíveis.
+> :cyclone: Sorteio de 4 clãs para escolher para seu personagem entre 50 opções disponíveis.
 ## Ficou interessado?
 Acesse nosso site: https://borutoraiden.com
 Veja nosso servidor: https://discord.gg/borutoraiden
@@ -50,11 +50,11 @@ Entretanto, os líderes de cada nação, cobertos por ganância, começaram a qu
 
 Mas... será que isso realmente acabará em paz?
 *O que oferecemos:*
-> 🤖 Servidor semi-automático com site e bot exclusivos, esqueça cenas de 2000 caracteres todos os dias.
-> 📜 Modo história com um evento canon toda semana.
-> ⚔️ Campeonato das Nações para competir pela sua vila.
+> 🤖 Servidor semi-automático com site, bot e aplicativo exclusivo, esqueça turnos de 2000 caracteres todos os dias.
+> 📜 Modo história com um evento toda semana.
+> ⚔️ Campeonato das Nações para competir pela sua vila para decidir a mais forte.
 > 🤝 Seguro, justo e honesto.
-> 🌀 Sorteio de 3 clãs para escolher para seu personagem entre 50 opções disponíveis.
+> 🌀 Sorteio de 4 clãs para escolher para seu personagem entre 50 opções disponíveis.
 * Ficou interessado?
 Acesse nosso site: https://borutoraiden.com
 Veja nosso servidor: https://discord.gg/borutoraiden

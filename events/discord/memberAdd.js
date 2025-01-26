@@ -12,7 +12,7 @@ export async function execute(member) {
         welcomeMessage = `# Olá, <@${member.id}> <:naruto_joinha:1260398351413809185>
 ## Seja bem vindo(a) ao RPG semi-automático textual **BORUTO RAIDEN**, a melhor comunidade do gênero de Naruto x Boruto.
 ## Sou a Eida Ootsutsuki, a aplicação mestra no servidor!
-Acesse nosso site [clicando aqui](<https://borutoraiden.com/>) baixar o aplicativo oficial e conhecer mais do nosso projeto.
+Acesse nosso site [clicando aqui](<https://borutoraiden.com/>) para baixar o nosso aplicativo e conhecer mais do nosso projeto.
 
 **Instagram:** <https://www.instagram.com/borutoraiden.oficial>
 **YouTube:** <https://www.youtube.com/@borutoraiden.oficial>
@@ -27,9 +27,9 @@ Confira nosso Guia para Iniciantes: <https://borutoraide.com/tutorials/guide>
     else if (serverId === '847874223900065869') { //Wiki Naruto e outros
         welcomeMessage = `# Olá, <@${member.id}>, bem-vindo(a) à **${member.guild.name}**!
 
-Sou a Eida Ootsutsuki, a aplicação mestra do Boruto Raiden, um MMORPG semi-automático textual de Naruto/Boruto e **parceira deste servidor!**
+Sou a Eida Ootsutsuki, a aplicação mestra do Boruto Raiden, um MMORPG semi-automático textual de Naruto/Boruto e parceira da Wiki Naruto!
 
-Confira nosso site [aqui](<https://borutoraide.com>) para mais informações sobre o nosso jogo como download, ou se preferir um contato mais direto, acesse nosso servidor [clicando aqui](<https://discord.gg/2PRXvbxwjr>), te aguardamos! 🥰`;
+Confira nosso site [clicando aqui](<https://borutoraide.com>) para mais informações sobre o nosso jogo como download, ou se preferir um contato mais direto, acesse nosso servidor [clicando aqui](<https://discord.gg/2PRXvbxwjr>), te aguardamos! 🥰`;
     }
 
     else { //Qualquer outro servidor
@@ -38,7 +38,7 @@ Vi que você entrou no servidor **${member.guild.name}**. Acabei de verificar e 
 
 Caso queira saber de onde eu vim, eu sou do RPG Boruto Raiden, a melhor comunidade do gênero de Naruto x Boruto.
 
-Se quiser saber mais sobre o projeto, acesse nosso site [clicando aqui](<https://borutoraiden.com/>) e baixe o aplicativo oficial ou acesse nosso servidor [clicando aqui](<https://discord.gg/2PRXvbxwjr>).`;
+Se quiser saber mais sobre o jogo, acesse nosso site [clicando aqui](<https://borutoraiden.com/>) e baixe o nosso aplicativo ou acesse nosso servidor [clicando aqui](<https://discord.gg/2PRXvbxwjr>).`;
     }
 
     try {
@@ -52,7 +52,7 @@ Se quiser saber mais sobre o projeto, acesse nosso site [clicando aqui](<https:/
         const channel = member.guild.channels.cache.get('1164407564096770048');
         if (channel && serverId === '1164398692283990046') {
             try {
-                await channel.send({ content: `Olá, <@${member.id}>! Infelizmente, não consegui te enviar a mensagem de boas-vindas diretamente na sua DM, então estou enviando por aqui no chat do servidor. ${welcomeMessage}` });
+                await channel.send({ content: `Olá, <@${member.id}>! Infelizmente, não consegui te enviar a mensagem de boas-vindas diretamente na sua DM, então estou enviando por aqui no chat do servidor.\n\n${welcomeMessage}` });
             } catch (channelErr) {
                 console.error(`Falha ao enviar mensagem no canal: ${channelErr}`);
             }
