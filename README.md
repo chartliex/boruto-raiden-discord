@@ -16,7 +16,7 @@ Inicie sua aventura acessando nosso site e baixando o nosso aplicativo.
 ## 📌 Links Rápidos
 - 🎮 [Jogo](https://discord.com/invite/2PRXvbxwjr)
 - 🌐 [Site](https://borutoraiden.com/)
-- 📹 [YouTube](https://www.youtube.com/@BorutoRaidenRPG)
+- 📹 [YouTube](https://www.youtube.com/@borutoraiden_vtx)
 - 📸 [Instagram](https://www.instagram.com/borutoraiden_vtx)
 - 🐦 [X/Twitter](https://x.com/borutoraidenvtx)
 
