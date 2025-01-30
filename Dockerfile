@@ -1,5 +1,5 @@
 # Use uma imagem base do Node.js
-FROM bun:1.2.0
+FROM bun:1.2.1
 
 # Defina o diretório de trabalho dentro do contêiner
 WORKDIR /app
