@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "bun deploy-commands.js && bun index.js"
+    "start": "bun deploy-commands.js && bun index.js",
+    "dev": "bun --hot index.js",
+    "reload": "bun deploy-commands.js"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +14,7 @@
   "dependencies": {
     "cron": "3.5.0",
     "discord.js": "14.17.3",
-    "mongodb": "6.12.0",
+    "mongodb": "6.13.0",
     "node-fetch": "3.3.2"
   }
 }
