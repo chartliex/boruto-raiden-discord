@@ -5,11 +5,12 @@ import { readdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 
 const client = new Client({
-	intents:[GatewayIntentBits.Guilds, 
+	intents: [
 		GatewayIntentBits.GuildMessages,
 		GatewayIntentBits.DirectMessages, 
 		GatewayIntentBits.MessageContent,
-		GatewayIntentBits.GuildMembers ]
+		GatewayIntentBits.GuildMembers
+	]
 });
 
 export { client };
