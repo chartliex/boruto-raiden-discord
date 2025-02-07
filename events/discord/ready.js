@@ -11,7 +11,7 @@ export async function execute(client) {
     // Obtém o canal e envia a mensagem
     const channel = await client.channels.fetch(channelId).catch(console.error);
     if (channel && channel.isTextBased()) {
-        channel.send("Ah... estou aqui. Tente não me entediar.");
+        channel.send("Ah... estou aqui. Tentem não me entediar.");
     } else {
         console.error(`Não foi possível encontrar o canal de ID ${channelId}.`);
     }
