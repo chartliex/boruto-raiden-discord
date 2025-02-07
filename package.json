@@ -14,7 +14,6 @@
   "dependencies": {
     "cron": "3.5.0",
     "discord.js": "14.17.3",
-    "mongodb": "6.13.0",
-    "node-fetch": "3.3.2"
+    "mongodb": "6.13.0"
   }
 }
