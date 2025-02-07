@@ -34,7 +34,7 @@ Mas... Será que isso realmente acabará em paz?
 > :cyclone: Sorteio de 4 clãs para escolher para seu personagem entre 50 opções disponíveis.
 ## Ficou interessado?
 Acesse nosso site: https://borutoraiden.com
-Veja nosso servidor: https://discord.gg/borutoraiden
+Veja nosso servidor: https://discord.borutoraiden.com
 
 Também estamos com uma vaga para staff responsável pelo Instagram e marketing.
 
@@ -57,7 +57,7 @@ Mas... será que isso realmente acabará em paz?
 > 🌀 Sorteio de 4 clãs para escolher para seu personagem entre 50 opções disponíveis.
 * Ficou interessado?
 Acesse nosso site: https://borutoraiden.com
-Veja nosso servidor: https://discord.gg/borutoraiden
+Veja nosso servidor: https://discord.borutoraiden.com
 
 > Também estamos com uma vaga para staff responsável pelo Instagram e marketing.
 
