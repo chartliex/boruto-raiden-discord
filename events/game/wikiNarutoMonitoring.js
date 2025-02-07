@@ -18,10 +18,10 @@ async function checkWikiUpdates() {
                 const diffUrl = `${pageUrl}?diff=${change.revid}&oldid=${change.old_revid}`;
                 const userUrl = `https://naruto.fandom.com/pt-br/wiki/User:${encodeURIComponent(change.user)}`;
 
-                let message = `**Página Alterada:** [${change.title}](${pageUrl})\n`;
+                let message = `**Página alterada:** [${change.title}](${pageUrl})\n`;
                 message += `**Usuário:** [${change.user}](<${userUrl}>)\n`;
-                message += `**Comentário:** ${change.comment || 'Sem comentário'}\n`;
-                message += `**Data:** ${new Date().toLocaleString()}\n`;
+                message += `**Comentário:** ${change.comment || 'Nenhum'}\n`;
+                message += `**Data:** ${new Date().toLocaleString('pt-BR', { timeZone: 'UTC' })}\n`;
                 message += `**Modificação:** [Clique aqui](<${diffUrl}>)`;
 
                 const channel = await client.channels.fetch("1298075990366617651");
