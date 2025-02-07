@@ -14,10 +14,10 @@ export async function execute(member) {
 ## Sou a Eida Ootsutsuki, a aplicação mestra no servidor!
 Acesse nosso site [clicando aqui](<https://borutoraiden.com/>) para baixar o nosso aplicativo e conhecer mais do nosso projeto.
 
-**Instagram:** <https://www.instagram.com/borutoraiden.oficial>
-**YouTube:** <https://www.youtube.com/@borutoraiden.oficial>
-**X/Twitter:** <https://x.com/borutoraidenofc>
-**Facebook:** <https://www.facebook.com/borutoraiden.oficial>
+**Instagram:** <https://www.instagram.com/borutoraiden_vtx/>
+**YouTube:** <https://www.youtube.com/@borutoraiden_vtx>
+**X/Twitter:** <https://x.com/borutoraidenvtx>
+**Discord:** <https://discord.gg/2PRXvbxwjr>
 
 Confira nosso Guia para Iniciantes: <https://borutoraide.com/tutorials/guide>
 
