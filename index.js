@@ -1,8 +1,10 @@
-import { EventEmitter } from 'events'; EventEmitter.defaultMaxListeners = 20;
 import { Client, Collection, GatewayIntentBits } from 'discord.js';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { readdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
+import { connectToMongoDB } from './mongodb.js';
+
+await connectToMongoDB();
 
 const client = new Client({
 	intents: [
@@ -36,7 +38,7 @@ for (const folder of commandFolders) {
 	}
 }
 
-function readEvents(dir) {
+async function readEvents(dir) {
 	const files = readdirSync(dir);
 	for (const file of files) {
 	  const filePath = join(dir, file);
@@ -53,7 +55,7 @@ function readEvents(dir) {
 		});
 	  }
 	}
-} 
-readEvents(join(__dirname, 'events'));
+}
+await readEvents(join(__dirname, 'events'));
 
 await client.login(process.env.DISCORD_BOT_TOKEN);
