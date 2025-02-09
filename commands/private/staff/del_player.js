@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';	
+import { SlashCommandBuilder, MessageFlags } from 'discord.js';	
 
 export const data = new SlashCommandBuilder()
     .setName('del_player')
@@ -94,7 +94,7 @@ export async function execute(interaction, userAccount, userDB, infoGameDB, item
   const reason = interaction.options.getString('reason')
   const target = interaction.options.getUser('target')
   const targetAccount = await userDB.findOne({ "id_dc": target.id });
-  if (!targetAccount.ficha1?.active) return await interaction.editReply({ content: `**${target}** não é um alvo válido ou ele não possuí uma conta/personagem.`, ephemeral: true});
+  if (!targetAccount.ficha1?.active) return await interaction.editReply({ content: `**${target}** não é um alvo válido ou ele não possuí uma conta/personagem.`, flags: MessageFlags.Ephemeral});
   
   if (typeGive === "item") {
     const item = await itemDB.findOne({ idItem: idDel });

@@ -1,4 +1,4 @@
-import { Events } from 'discord.js';
+import { Events, MessageFlags} from 'discord.js';
 import { client } from "../../index.js";
 import { userDB, infoGameDB, itemDB, jutsuDB, invDB, clanDB } from '../../mongodb.js'
 let userAccount;
@@ -14,19 +14,19 @@ export async function execute(interaction) {
 	userAccount = await userDB.findOne({ "id_dc": interaction.user.id })
 
     if (!userAccount) {
-        return interaction.reply({ content: 'Você não está cadastrado em nossa base de dados.', ephemeral: true });
+        return interaction.reply({ content: 'Você não está cadastrado em nossa base de dados.', flags: MessageFlags.Ephemeral });
     }
 
     if (!userAccount?.emailConfirmed) {
-        return interaction.reply({ content: 'Confirme sua conta antes de executar este comando.', ephemeral: true });
+        return interaction.reply({ content: 'Confirme sua conta antes de executar este comando.', flags: MessageFlags.Ephemeral });
     }
 
     if (!userAccount?.id_dc) {
-        return interaction.reply({ content: 'Vincule sua conta do site para nosso servidor do Discord antes de executar este comando.', ephemeral: true });
+        return interaction.reply({ content: 'Vincule sua conta do site para nosso servidor do Discord antes de executar este comando.', flags: MessageFlags.Ephemeral });
     }
 
     if (!userAccount?.ficha1?.active && userAccount?.staff === 0) {
-        return interaction.reply({ content: 'Crie um personagem antes de executar este comando.', ephemeral: true });
+        return interaction.reply({ content: 'Crie um personagem antes de executar este comando.', flags: MessageFlags.Ephemeral });
     }
 
 	try {
@@ -60,7 +60,7 @@ export async function execute(interaction) {
 	catch (error) {
 		await interaction.editReply({ 
             content: 'Ocorreu um erro ao executar este comando! Consulte a equipe STAFF.',
-            ephemeral: true 
+            flags: MessageFlags.Ephemeral 
         });
         
         console.error(`Erro ao executar /${interaction.commandName}`);

@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, MessageFlags } from 'discord.js';
 
 export const data = new SlashCommandBuilder()
     .setName('adv_change')
@@ -52,10 +52,10 @@ export async function execute(interaction, userAccount, userDB, infoGameDB, item
 
         let targetAccount = await userDB.findOne({ "id_dc": target.id });
         if (!targetAccount) {
-            return await interaction.editReply({ content: `**${target}** não é um alvo válido ou não possui uma conta/personagem.`, ephemeral: true });
+            return await interaction.editReply({ content: `**${target}** não é um alvo válido ou não possui uma conta/personagem.`, flags: MessageFlags.Ephemeral });
         }
         if (targetAccount.warns === 3) {
-            return await interaction.editReply({ content: `**${target}** já tem o máximo de avisos.`, ephemeral: true });
+            return await interaction.editReply({ content: `**${target}** já tem o máximo de avisos.`, flags: MessageFlags.Ephemeral });
         }
 
         // Incrementa o número de advertências
@@ -115,10 +115,10 @@ export async function execute(interaction, userAccount, userDB, infoGameDB, item
 
         let targetAccount = await userDB.findOne({ "id_dc": target.id });
         if (!targetAccount) {
-            return await interaction.editReply({ content: `**${target}** não é um alvo válido ou não possui uma conta/personagem.`, ephemeral: true });
+            return await interaction.editReply({ content: `**${target}** não é um alvo válido ou não possui uma conta/personagem.`, flags: MessageFlags.Ephemeral });
         }
         if (targetAccount.warns === 0) {
-            return await interaction.editReply({ content: `**${target}** não tem advertências a serem removidas.`, ephemeral: true });
+            return await interaction.editReply({ content: `**${target}** não tem advertências a serem removidas.`, flags: MessageFlags.Ephemeral });
         }
 
         await userDB.updateOne({ "id_dc": target.id }, {

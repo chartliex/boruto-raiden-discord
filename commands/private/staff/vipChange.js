@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, MessageFlags } from 'discord.js';
 
 export const data = new SlashCommandBuilder()
     .setName('vip')
@@ -47,7 +47,7 @@ export const data = new SlashCommandBuilder()
     );
 
 export async function execute(interaction, userAccount, userDB, infoGameDB, itemDB, jutsuDB, invDB, clanDB, client) {
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
     if (userAccount.staff < 3) {
         return await interaction.editReply({ content: 'Você não tem permissão para usar este comando.' });

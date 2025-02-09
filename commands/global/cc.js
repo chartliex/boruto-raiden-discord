@@ -1,4 +1,5 @@
-import { SlashCommandBuilder } from 'discord.js';
+
+import { SlashCommandBuilder, MessageFlags } from 'discord.js';
 
 export const data = new SlashCommandBuilder()
     .setName('cc')
@@ -13,7 +14,7 @@ export const data = new SlashCommandBuilder()
     .setContexts(0);
 
 export async function execute(interaction, userAccount, userDB, infoGameDB, itemDB, jutsuDB, invDB, clanDB, client) {
-    await interaction.deferReply({ephemeral: true, fetchReply: true})
+    await interaction.deferReply({flags: MessageFlags.Ephemeral, fetchReply: true})
     let targetAccount = interaction.options.getUser('outro_jogador')
     
     if (targetAccount && targetAccount?.id !== userAccount?.id_dc) {

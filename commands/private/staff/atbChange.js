@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, MessageFlags } from 'discord.js';
 
 export const data = new SlashCommandBuilder()
     .setName('atb_change')
@@ -279,7 +279,7 @@ export async function execute(interaction, userAccount, userDB, infoGameDB, item
     const amount = interaction.options.getNumber('amount');
 
     let targetAccount = await userDB.findOne({ "id_dc": target.id });
-    if (!targetAccount || !targetAccount.ficha1.active) return await interaction.editReply({ content: `*${target}* não é um alvo válido ou ele não possui uma conta/personagem.`, ephemeral: true });
+    if (!targetAccount || !targetAccount.ficha1.active) return await interaction.editReply({ content: `*${target}* não é um alvo válido ou ele não possui uma conta/personagem.`, flags: MessageFlags.Ephemeral });
 
     const attributeName = attributeNames[atb];
     const amountText = amount > 0 ? `+${amount}` : `${amount}`;

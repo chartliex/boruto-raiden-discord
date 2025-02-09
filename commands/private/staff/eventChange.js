@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, MessageFlags } from 'discord.js';
 
 export const data = new SlashCommandBuilder()
     .setName('event_change')
@@ -34,7 +34,7 @@ export const data = new SlashCommandBuilder()
     .setContexts(0);
 
 export async function execute(interaction, userAccount, userDB, infoGameDB, itemDB, jutsuDB, invDB, clanDB, client) {
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
     if (userAccount.staff < 1) {
         return await interaction.editReply({ content: `Você não tem permissão para usar este comando. Apenas staff Ajudante ou superior pode usá-lo.` });
@@ -47,7 +47,7 @@ export async function execute(interaction, userAccount, userDB, infoGameDB, item
 
         let targetAccount = await userDB.findOne({ "id_dc": target.id });
         if (!targetAccount || !targetAccount?.ficha1?.active) {
-            return await interaction.editReply({ content: `**${target}** não é um alvo válido ou não possui uma conta/personagem.`, ephemeral: true });
+            return await interaction.editReply({ content: `**${target}** não é um alvo válido ou não possui uma conta/personagem.`, flags: MessageFlags.Ephemeral });
         }
 
         if (targetAccount.ficha1.state !== "Livre") {
@@ -78,7 +78,7 @@ export async function execute(interaction, userAccount, userDB, infoGameDB, item
 
         let targetAccount = await userDB.findOne({ "id_dc": target.id });
         if (!targetAccount) {
-            return await interaction.editReply({ content: `**${target}** não é um alvo válido ou não possui uma conta/personagem.`, ephemeral: true });
+            return await interaction.editReply({ content: `**${target}** não é um alvo válido ou não possui uma conta/personagem.`, flags: MessageFlags.Ephemeral });
         }
 
         if (targetAccount.ficha1.state === "Livre") {

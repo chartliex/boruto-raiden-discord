@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, MessageFlags } from 'discord.js';
 
 export const data = new SlashCommandBuilder()
     .setName('pp')
@@ -77,7 +77,7 @@ export const data = new SlashCommandBuilder()
     .setContexts(0)
 
 export async function execute(interaction, userAccount, userDB, infoGameDB, itemDB, jutsuDB, invDB, clanDB, client) {
-    await interaction.deferReply({ ephemeral: true })
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral })
     const typeCommand = interaction.options.getSubcommand();
     let targetAccount = interaction.options.getUser('outro_jogador')
 
@@ -231,14 +231,14 @@ export async function execute(interaction, userAccount, userDB, infoGameDB, item
           tempMessage += `**• Desc:** ${jutsuDesc.desc}\n\n`;
           
           if ((messageToSend + tempMessage).length > 2000) {
-            await interaction.followUp({ content: messageToSend, ephemeral: true });
+            await interaction.followUp({ content: messageToSend, flags: MessageFlags.Ephemeral });
             messageToSend = '';
           }
 
           messageToSend += tempMessage;
 
           if (jutsuId === lastJutsuId) {
-            await interaction.followUp({ content: messageToSend, ephemeral: true });
+            await interaction.followUp({ content: messageToSend, flags: MessageFlags.Ephemeral });
           }
         }
       }

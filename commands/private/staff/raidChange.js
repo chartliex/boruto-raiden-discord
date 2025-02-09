@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, MessageFlags } from 'discord.js';
 import { randomInt } from 'crypto';
 
 export const data = new SlashCommandBuilder()
@@ -71,7 +71,7 @@ export const data = new SlashCommandBuilder()
     .setContexts(0);
 
 export async function execute(interaction, userAccount, userDB, infoGameDB, itemDB, jutsuDB, invDB, clanDB, client) {
-    await interaction.deferReply({ ephemeral: true });
+    await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
     async function updateLevel(doc, xpGained) {
         let currentLevel = doc.ficha1.level;

@@ -1,4 +1,4 @@
-import { SlashCommandBuilder } from 'discord.js';
+import { SlashCommandBuilder, MessageFlags } from 'discord.js';
 
 export const data = new SlashCommandBuilder()
     .setName('ptt_change')
@@ -24,7 +24,7 @@ export async function execute(interaction, userAccount, userDB, infoGameDB, item
     const reason = interaction.options.getString('reason')
     const target = interaction.options.getUser('target')
     let targetAccount = await userDB.findOne({ "id_dc": target.id });
-    if (!targetAccount || !targetAccount?.ficha1?.active) return await interaction.editReply({ content: `*${target}* não é um alvo válido ou ele não possuí uma conta/personagem.`, ephemeral: true});
+    if (!targetAccount || !targetAccount?.ficha1?.active) return await interaction.editReply({ content: `*${target}* não é um alvo válido ou ele não possuí uma conta/personagem.`, flags: MessageFlags.Ephemeral});
 
     const SHINOBI_ROLE_ID = "1164695162958655601";
     const NUKENIN_ROLE_ID = "1164695226414268458";
